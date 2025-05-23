@@ -133,13 +133,13 @@ def display_game_screen():
         if room_info["left"]:
             if st.button("⬅️ 이전 방", key="left_arrow"):
                 st.session_state.current_room = room_info["left"]
-                st.experimental_rerun()
+                st.rerun() # 변경된 부분
 
     with col3:
         if room_info["right"]:
             if st.button("다음 방 ➡️", key="right_arrow"):
                 st.session_state.current_room = room_info["right"]
-                st.experimental_rerun()
+                st.rerun() # 변경된 부분
 
     st.markdown("---")
     st.subheader("🎒 인벤토리")
